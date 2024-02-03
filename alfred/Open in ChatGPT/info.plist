@@ -48,27 +48,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>chatgpt</string>
-				<key>subtext</key>
-				<string>Open ChatGPT with message in Safari</string>
-				<key>text</key>
-				<string>Ask ChatGPT</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>EDF665A3-438D-47E3-BCBA-B9087AFD581B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -94,27 +73,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query="{query}"
-
-/usr/bin/osascript chat_gpt.scpt "Explain: \"{query}\""</string>
-				<key>scriptargtype</key>
+				<key>argumenttype</key>
 				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
+				<key>keyword</key>
+				<string>chatgpt</string>
+				<key>subtext</key>
+				<string>Open ChatGPT with message in Safari</string>
+				<key>text</key>
+				<string>Ask ChatGPT</string>
+				<key>withspace</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>649876C1-D783-4CFA-9B3B-B6095445D1D4</string>
+			<string>EDF665A3-438D-47E3-BCBA-B9087AFD581B</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -136,6 +111,31 @@
 			<string>398109F2-89E6-4291-AEE5-53974B51C57E</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+/usr/bin/osascript chat_gpt.scpt "Explain: \"{query}\""</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>649876C1-D783-4CFA-9B3B-B6095445D1D4</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
