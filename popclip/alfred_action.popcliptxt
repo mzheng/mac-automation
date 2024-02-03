@@ -1,0 +1,3 @@
+-- # PopClip Open In Alfred Action
+-- { name: Alfred Action, icon: iconify:fluent-emoji-high-contrast:top-hat, language: applescript }
+tell application id "com.runningwithcrayons.Alfred" to action "{popclip text}"
