@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mzheng.login_microsoft_device_token</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>A16101A6-A066-4385-9F9B-F4525D0D658F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FABE28DF-5B76-4C5D-8AFA-59501F645F66</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EDF665A3-438D-47E3-BCBA-B9087AFD581B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A16101A6-A066-4385-9F9B-F4525D0D658F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Zheng</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Microsoft Device Token Login</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+/usr/bin/osascript device_login.scpt "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FABE28DF-5B76-4C5D-8AFA-59501F645F66</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>login</string>
+				<key>subtext</key>
+				<string>Selected text or clipboard</string>
+				<key>text</key>
+				<string>Log in to Microsoft with a device token</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>EDF665A3-438D-47E3-BCBA-B9087AFD581B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+if [ -z "$query" ]; then
+	query=`pbpaste`
+fi
+
+echo $query</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A16101A6-A066-4385-9F9B-F4525D0D658F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Open Microsoft Login with device token and attempts to login in Safari using AppleScript automation.
+
+This either paste in the selected text or takes the input from the clipboard.
+
+This assumes the user has called 'az login --use-device-code' before running this workflow.</string>
+	<key>uidata</key>
+	<dict>
+		<key>A16101A6-A066-4385-9F9B-F4525D0D658F</key>
+		<dict>
+			<key>xpos</key>
+			<real>465</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>EDF665A3-438D-47E3-BCBA-B9087AFD581B</key>
+		<dict>
+			<key>xpos</key>
+			<real>210</real>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>FABE28DF-5B76-4C5D-8AFA-59501F645F66</key>
+		<dict>
+			<key>xpos</key>
+			<real>690</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
