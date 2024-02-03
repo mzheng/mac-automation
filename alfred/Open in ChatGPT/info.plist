@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mzheng.openchatgpt</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>398109F2-89E6-4291-AEE5-53974B51C57E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>649876C1-D783-4CFA-9B3B-B6095445D1D4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EDF665A3-438D-47E3-BCBA-B9087AFD581B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A16101A6-A066-4385-9F9B-F4525D0D658F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Zheng</string>
+	<key>description</key>
+	<string>Open ChatGPT with your message in Safari</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open in ChatGPT</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>chatgpt</string>
+				<key>subtext</key>
+				<string>Open ChatGPT with message in Safari</string>
+				<key>text</key>
+				<string>Ask ChatGPT</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>EDF665A3-438D-47E3-BCBA-B9087AFD581B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+/usr/bin/osascript chat_gpt.scpt "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A16101A6-A066-4385-9F9B-F4525D0D658F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+/usr/bin/osascript chat_gpt.scpt "Explain: \"{query}\""</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>649876C1-D783-4CFA-9B3B-B6095445D1D4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>explain</string>
+				<key>subtext</key>
+				<string>Open ChatGPT to explain the message in Safari</string>
+				<key>text</key>
+				<string>Ask ChatGPT to explain</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>398109F2-89E6-4291-AEE5-53974B51C57E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Open ChatGPT with your message in Safari using AppleScript automation.
+
+This enables quick access to ChatGPT without OpenAI API.
+
+
+Requires the user to be logged into https://chat.openai.com on Safari.
+
+Supports 2 commands:
+1. chatgpt -&gt; Opens up ChatGPT with the message
+2. explain -&gt; Opens up ChatGPT with "Explain: {message}"</string>
+	<key>uidata</key>
+	<dict>
+		<key>398109F2-89E6-4291-AEE5-53974B51C57E</key>
+		<dict>
+			<key>note</key>
+			<string>Make sure you're logged into ChatGPT on Safari</string>
+			<key>xpos</key>
+			<real>210</real>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>649876C1-D783-4CFA-9B3B-B6095445D1D4</key>
+		<dict>
+			<key>xpos</key>
+			<real>530</real>
+			<key>ypos</key>
+			<real>410</real>
+		</dict>
+		<key>A16101A6-A066-4385-9F9B-F4525D0D658F</key>
+		<dict>
+			<key>xpos</key>
+			<real>520</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+		<key>EDF665A3-438D-47E3-BCBA-B9087AFD581B</key>
+		<dict>
+			<key>note</key>
+			<string>Make sure you're logged into ChatGPT on Safari</string>
+			<key>xpos</key>
+			<real>210</real>
+			<key>ypos</key>
+			<real>175</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
