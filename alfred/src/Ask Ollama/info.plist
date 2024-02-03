@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.mzheng.ask_ollama</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>3BB1CC05-A11A-498C-85BF-31F1C582A5E2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>500B3515-CD94-4234-A9BD-6B6993867F64</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>500B3515-CD94-4234-A9BD-6B6993867F64</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Zheng</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Ask Ollama</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>chatollama</string>
+				<key>subtext</key>
+				<string>Ask Ollama with a question</string>
+				<key>text</key>
+				<string>Ask Ollama</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3BB1CC05-A11A-498C-85BF-31F1C582A5E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"
+
+cd src
+
+python3 ./run_ollama.py "$query"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>500B3515-CD94-4234-A9BD-6B6993867F64</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Ask Ollama a question.
+
+Requires Ollama running locally. Read more here: https://ollama.ai
+
+UI Based on ChatFred: https://github.com/chrislemke/ChatFred</string>
+	<key>uidata</key>
+	<dict>
+		<key>3BB1CC05-A11A-498C-85BF-31F1C582A5E2</key>
+		<dict>
+			<key>xpos</key>
+			<real>95</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>500B3515-CD94-4234-A9BD-6B6993867F64</key>
+		<dict>
+			<key>xpos</key>
+			<real>340</real>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
